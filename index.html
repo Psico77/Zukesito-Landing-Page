@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hector | Estudiante de programación</title>
+    <link rel="stylesheet" href="/landing.css">
+     
+</head>
+<body>
+
+    <div class="magia-fondo" aria-hidden="true"></div>
+
+    <script>
+        const fondoMagia = document.querySelector('.magia-fondo');
+        const particulasBase = [
+            'particula particula-1', 'particula particula-2', 'particula particula-3', 'particula particula-4',
+            'particula particula-5', 'particula particula-6', 'particula particula-7', 'particula particula-8',
+            'particula particula-9', 'particula particula-10', 'particula particula-11', 'particula particula-12',
+            'particula particula-13', 'particula particula-14', 'particula particula-15', 'particula particula-16',
+            'particula particula-17', 'particula particula-18', 'particula particula-19', 'particula particula-20',
+            'particula particula-21', 'particula particula-22', 'particula particula-23', 'particula particula-24'
+        ];
+        const particulasExtra = [
+            '--left:58.6%; --size:5px; --dur:4.9s; --delay:0.8s;',
+            '--left:13.3%; --size:5px; --dur:5.9s; --delay:2.1s;',
+            '--left:44.4%; --size:3px; --dur:6.4s; --delay:0.3s;',
+            '--left:25.2%; --size:3px; --dur:4.0s; --delay:0.1s;',
+            '--left:48.6%; --size:4px; --dur:6.4s; --delay:2.3s;',
+            '--left:4.4%; --size:5px; --dur:4.0s; --delay:2.4s;',
+            '--left:6.7%; --size:7px; --dur:5.4s; --delay:2.8s;',
+            '--left:25.9%; --size:7px; --dur:4.5s; --delay:1.3s;',
+            '--left:92.5%; --size:4px; --dur:5.4s; --delay:3.4s;',
+            '--left:70.4%; --size:4px; --dur:3.8s; --delay:3.5s;',
+            '--left:14.1%; --size:6px; --dur:4.1s; --delay:0.0s;',
+            '--left:85.5%; --size:6px; --dur:5.3s; --delay:2.8s;'
+        ];
+
+        particulasBase.forEach((className) => {
+            const particula = document.createElement('div');
+            particula.className = className;
+            fondoMagia.appendChild(particula);
+        });
+
+        particulasExtra.forEach((style) => {
+            const particula = document.createElement('div');
+            particula.className = 'particula';
+            particula.style.cssText = style;
+            fondoMagia.appendChild(particula);
+        });
+    </script>
+
+    <header>
+        <nav class="nav-container">
+            <img class="logo" src="/img/logo_fern.png" width="90" height="90" alt="">
+            <ul class="nav-links">
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#lenguajes">Tecnologías dominadas</a></li>
+                <li><a href="#aprender">Tecnologías que quiero aprender</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#juegos">Mis juegos favoritos</a></li>
+                <li><a href="#certificaciones">Certificaciones</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="sobre-mi">
+        <div class="sobre-mi-container">
+            <div class="sobre-mi-foto-wrapper">
+                <div class="sobre-mi-foto-marco">
+                    <div class="circulo-magico circulo-magico-1"></div>
+                    <div class="circulo-magico circulo-magico-2"></div>
+                    <img class="perfil-img" src="/img/perfil.jpg" alt="Fotografía de Tu Nombre">
+                </div>
+            </div>
+
+            <div class="sobre-mi-texto">
+                <p class="hero-sub">Buenas, soy Héctor Lisandro Cruz Camacho</p>
+                <h1 class="hero-titulo">También conocido como Zukesito.<br>Programación. D&D. Videojuegos.</h1>
+                <p class="hero-descripcion">
+                    Soy estudiante en la carrera de Ingeniería en Tecnologías de Información e Innovación Digital en la Universidad Politécnica de Chiapas. Disfruto de programar en Java, jugar videojuegos, los juegos de mesa y especialmente Dungeons & Dragons.
+                </p>
+                <div>
+                    <a href="#proyectos" class="btn-cta">Ver mis proyectos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="lenguajes">
+        <h2 class="titulo-seccion">Tecnologías dominadas</h2>
+        <div class="skills-lista">
+            <div class="skill-card">
+                <div class="skill-lado">
+                    <img src="/img/java.png" alt="Logo de Java" width="40" height="40">
+                    <p class="skill-nombre">Java</p>
+                </div>
+                <p class="skill-desc">Java es un lenguaje de programación orientado a objetos que se utiliza ampliamente para desarrollar aplicaciones de escritorio, móviles y web. Es conocido por su portabilidad y eficiencia, siendo la plataforma de desarrollo preferida para muchas empresas y desarrolladores.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-lado">
+                    <img src="/img/c++.png" alt="Logo de C++" width="40" height="40">
+                    <p class="skill-nombre">C++</p>
+                </div>
+                <p class="skill-desc">C++ es un lenguaje de programación de propósito general que se utiliza para crear aplicaciones de alto rendimiento. Fue desarrollado por Bjarne Stroustrup como una extensión del lenguaje C y es conocido por su capacidad de programación orientada a objetos.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-lado">
+                    <img src="/img/figma.png" alt="Logo de Figma" width="40" height="40">
+                    <p class="skill-nombre">Figma</p>
+                </div>
+                <p class="skill-desc">Figma es una herramienta de diseño colaborativo basada en la web que permite a los usuarios crear interfaces y prototipos en tiempo real. Es utilizada ampliamente por equipos de diseño y desarrollo para mejorar la colaboración y la eficiencia en el proceso de diseño.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-lado">
+                    <img src="/img/tabletop.png" alt="Logo de Tabletop Creator" width="40" height="40">
+                    <p class="skill-nombre">Tabletop creator</p>
+                </div>
+                <p class="skill-desc">Tabletop Creator es un software diseñado para crear, prototipar y probar juegos de mesa, que permite a los usuarios diseñar componentes y exportarlos para juego físico u online. Ofrece herramientas para personalizar cada detalle de tu juego, facilitando dar vida a muchas ideas.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-lado">
+                    <img src="/img/godot.png" alt="Logo de Godot" width="40" height="40">
+                    <p class="skill-nombre">Godot</p>
+                </div>
+                <p class="skill-desc">Godot es un motor de juegos de código abierto que permite a los desarrolladores crear juegos tanto en 2D como en 3D en diversas plataformas, incluyendo escritorio, móvil y web. Es gratuito bajo la Licencia MIT, lo que significa que no hay regalías ni tasas de licencia involucradas.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-lado">
+                    <img src="/img/MCreator.png" alt="Logo de MCreator" width="40" height="40">
+                    <p class="skill-nombre">MCreator</p>
+                </div>
+                <p class="skill-desc">MCreator es una herramienta de código abierto para crear mods de Minecraft Java Edition, complementos de Bedrock Edition y paquetes de datos utilizando una interfaz visual o un editor de código integrado.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-lado">
+                    <img src="/img/html.png" alt="Logo de HTML" width="40" height="40">
+                    <p class="skill-nombre">HTML</p>
+                </div>
+                <p class="skill-desc">HTML es el lenguaje estándar utilizado para estructurar y presentar contenido en la web. Define la estructura de las páginas web mediante elementos y etiquetas que permiten incluir texto, imágenes, videos y formularios.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-lado">
+                    <img src="/img/css.png" alt="Logo de CSS" width="40" height="40">
+                    <p class="skill-nombre">CSS</p>
+                </div>
+                <p class="skill-desc">CSS es un lenguaje de estilos utilizado para describir la presentación de documentos HTML o XML, permitiendo definir cómo se deben mostrar los elementos en pantalla, papel u otros medios.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-lado">
+                    <img src="/img/js.png" alt="Logo de JS" width="40" height="40">
+                    <p class="skill-nombre">JavaScript</p>
+                </div>
+                <p class="skill-desc">JavaScript es un lenguaje de programación de alto nivel que se utiliza principalmente en el desarrollo web para crear experiencias interactivas en las páginas web. Es conocido por su capacidad para manipular el DOM y crear aplicaciones del lado del cliente.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-lado">
+                    <img src="/img/MySQL.png" alt="Logo de MySQL" width="40" height="40">
+                    <p class="skill-nombre">MySQL</p>
+                </div>
+                <p class="skill-desc">MySQL es un sistema de gestión de bases de datos relacional que se utiliza ampliamente en el desarrollo web para almacenar y gestionar información.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-lado">
+                    <img src="/img/bash.png" alt="Logo de Bash" width="40" height="40">
+                    <p class="skill-nombre">Bash</p>
+                </div>
+                <p class="skill-desc">Bash es el intérprete de comandos por defecto en sistemas operativos Linux y macOS, utilizado para ejecutar comandos y scripts.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-lado">
+                    <img src="/img/claude.png" alt="Logo de Claude" width="40" height="40">
+                    <p class="skill-nombre">Claude AI</p>
+                </div>
+                <p class="skill-desc">Claude AI es un modelo de lenguaje de gran tamaño desarrollado por Anthropic, diseñado para ser útil, seguro y confiable en una amplia variedad de tareas.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-lado">
+                    <img src="/img/Pixel studio.png" alt="Logo de Pixel Studio" width="40" height="40">
+                    <p class="skill-nombre">Pixel Studio</p>
+                </div>
+                <p class="skill-desc">Pixel Studio es un software de edición de imágenes y diseño gráfico que permite crear y manipular imágenes en formato raster.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="aprender">
+        <h2 class="titulo-seccion">Tecnologías que quiero aprender</h2>
+        <div class="skills-lista">
+            <div class="skill-card">
+                <div class="skill-lado">
+                    <img src="/img/github.png" alt="Logo de Github" width="40" height="40">
+                    <p class="skill-nombre">Github</p>
+                </div>
+                <p class="skill-desc">Github es una plataforma de desarrollo de software que ofrece servicios de control de versiones y colaboración para proyectos de código abierto y privado.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-lado">
+                    <img src="/img/lua.png" alt="Logo de Lua" width="40" height="40">
+                    <p class="skill-nombre">Lua</p>
+                </div>
+                <p class="skill-desc">Lua es un lenguaje de programación ligero, embeddable, que se utiliza principalmente para scripting en aplicaciones de juego y software.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-lado">
+                    <img src="/img/python.png" alt="Logo de Python" width="40" height="40">
+                    <p class="skill-nombre">Python</p>
+                </div>
+                <p class="skill-desc">Python es un lenguaje de programación de alto nivel, interpretado y de propósito general, ampliamente utilizado en el desarrollo web, ciencia de datos, inteligencia artificial y automatización.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-lado">
+                    <img src="/img/unity.png" alt="Logo de Unity" width="40" height="40">
+                    <p class="skill-nombre">Unity</p>
+                </div>
+                <p class="skill-desc">Unity es un motor de videojuegos multiplataforma que permite crear experiencias interactivas para diversas plataformas.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-lado">
+                    <img src="/img/unreal_engine.png" alt="Logo de Unreal Engine" width="40" height="40">
+                    <p class="skill-nombre">Unreal Engine</p>
+                </div>
+                <p class="skill-desc">Unreal Engine es un motor de videojuegos desarrollado por Epic Games que permite crear experiencias interactivas de alta calidad para diversas plataformas.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos">
+        <h2 class="titulo-seccion">Mis Proyectos</h2>
+        <div class="proyectos-lista">
+            <div class="proyecto-card">
+                <div class="proyecto-contenedor-img">
+                    <img src="/img/DeepSky.png" alt="Logo de DeepSky" width="300" height="300">
+                </div>
+                <div class="proyecto-info">
+                    <h3 class="proyecto-titulo">DeepSky backend</h3>
+                    <p class="proyecto-desc">Plataforma que unifica herramientas de divulgación científica orientado a la astronomía.</p>
+                    <ul class="proyecto-tech">
+                        <li>React.js</li>
+                        <li>Java</li>
+                        <li>MySQL</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="proyecto-card">
+                <div class="proyecto-contenedor-img">
+                    <img src="/img/liaquo.jpg" alt="Logo de Python" width="300" height="300">
+                </div>
+                <div class="proyecto-info">
+                    <h3 class="proyecto-titulo">Psico's Experience | Minecraft modpack</h3>
+                    <div class="proyecto-detalle">
+                        <p class="proyecto-desc">Modpack para Minecraft 1.20.1 | Forge. Potencia la immersión sin sacrificar del todo la experiencia Vanilla e minecraft.</p>
+                        <p class="proyecto-link"><a href="https://www.curseforge.com/minecraft/modpacks/psicos-experience" target="_blank" rel="noopener noreferrer">https://www.curseforge.com/minecraft/modpacks/psicos-experience</a></p>
+                    </div>
+                    <ul class="proyecto-tech">
+                        <li>Forge 47.4.0</li>
+                        <li>Minecraft 1.20.1</li>
+                        <li>Curseforge</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="proyecto-card">
+                <div class="proyecto-contenedor-img">
+                    <img src="/img/soul knight.jpg" alt="Logo de Soul Knight" width="300" height="300">
+                </div>
+                <div class="proyecto-info">
+                    <h3 class="proyecto-titulo">Soul Knight D&D</h3>
+                    <p class="proyecto-desc">Archivo gratuito imprimible con elementos temáticos del videojuego Soul Knight. Será para poder jugar D&D o cualquier otro juego de mesa temático.</p>
+                    <ul class="proyecto-tech">
+                        <li>Tabletop Creator</li>
+                        <li>Soul Knight</li>
+                        <li>Pixel Studio</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="eventos">
+        <h2 class="titulo-seccion">Eventos</h2>
+        <div class="eventos-grid">
+            <div class="evento-card">
+                <div class="evento-contenedor-img">
+                    <img class="evento-img" src="/img/expociencia.png" alt="Hackathon">
+                </div>
+                <div class="evento-info">
+                    <span class="evento-tag">Expociencias Chiapas 2026</span>
+                    <h3 class="evento-titulo">Expociencias Chiapas 2026</h3>
+                    <p class="evento-desc">Participación en equipo para la presentación del proyecto DeepSky.</p>
+                </div>
+            </div>
+            <div class="evento-card">
+                <div class="evento-contenedor-img">
+                    <img class="evento-img" src="/img/mob.jpg" alt="Votacion">
+                </div>
+                <div class="evento-info">
+                    <span class="evento-tag">Mob vote 2022</span>
+                    <h3 class="evento-titulo">Minecraft Mob vote 2022</h3>
+                    <p class="evento-desc">Votación sobre la nueva criatura que se agregó al videojuego Minecraft en el año 2022.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="juegos">
+        <h2 class="titulo-seccion">Mis juegos favoritos</h2>
+        <div class="juegos-lista">
+            <div class="juego-card">
+                <img class="juego-banner" src="/img/DeathMustDie.jpg" alt="Death Must Die banner">
+                <div class="juego-info">
+                    <div class="juego-titulo-row">
+                        <h3 class="juego-titulo">Death Must Die</h3>
+                    </div>
+                    <p class="juego-desc">Death Must Die es un paraíso de rol roguelite en el que juegas como los héroes que intentan derrotar a la Muerte. Un panteón de dioses guía a los héroes en su búsqueda, y cada uno de ellos otorga diferentes y poderosas bendiciones. </p>
+                    <ul class="juego-tags">
+                        <li>Roguelike</li>
+                        <li>Bullet Hell</li>
+                        <li>Dark Fantasy</li>
+                    </ul>
+                    <div class="juego-meta">
+                        <span>Desarrollador: Realm Archive</span>
+                        <span>Editor: Realm Archive</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="juego-card">
+                <img class="juego-banner" src="/img/HollowKnightSilksong.jpg" alt="Hollow Knight: Silksong banner">
+                <div class="juego-info">
+                    <div class="juego-titulo-row">
+                        <h3 class="juego-titulo">Hollow Knight: Silksong</h3>
+                    </div>
+                    <p class="juego-desc">Hollow Knight: Silksong es una secuela de la popular aventura de plataformas Hollow Knight. En esta nueva entrega, los jugadores se adentran en un mundo más amplio y lleno de secretos.</p>
+                    <ul class="juego-tags">
+                        <li>Plataformas</li>
+                        <li>Indie</li>
+                        <li>Dificultad</li>
+                    </ul>
+                    <div class="juego-meta">
+                        <span>Desarrollador: Team Cherry</span>
+                        <span>Editor: Team Cherry</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="juego-card">
+                <img class="juego-banner" src="/img/MuseDash.png" alt="Muse Dash banner">
+                <div class="juego-info">
+                    <div class="juego-titulo-row">
+                        <h3 class="juego-titulo">Muse Dash</h3>
+                    </div>
+                    <p class="juego-desc">Muse Dash es un juego de ritmo desarrollado por PeroPeroGames que combina elementos de acción y música, con un colorido estilo artístico anime y controles sencillos de dos botones.</p>
+                    <ul class="juego-tags">
+                        <li>Música</li>
+                        <li>Ritmo</li>
+                        <li>Anime</li>
+                    </ul>
+                    <div class="juego-meta">
+                        <span>Desarrollador: peropero</span>
+                        <span>Editor: hasuhasu</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="juego-card">
+                <img class="juego-banner" src="/img/Factorio.jpg" alt="Factorio banner">
+                <div class="juego-info">
+                    <div class="juego-titulo-row">
+                        <h3 class="juego-titulo">Factorio</h3>
+                    </div>
+                    <p class="juego-desc">Factorio es un juego de construcción y gestión de recursos en un entorno de mundo abierto, donde los jugadores deben construir fábricas y sistemas complejos para producir bienes y avanzar en la historia.</p>
+                    <ul class="juego-tags">
+                        <li>Construcción</li>
+                        <li>Gestión de recursos</li>
+                        <li>Mundo abierto</li>
+                    </ul>
+                    <div class="juego-meta">
+                        <span>Desarrollador: Wube Software LTD</span>
+                        <span>Editor: Wube Software LTD</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="juego-card">
+                <img class="juego-banner" src="/img/Oyasumii.jpg" alt="Oyasumii banner">
+                <div class="juego-info">
+                    <div class="juego-titulo-row">
+                        <h3 class="juego-titulo">Oyasumii</h3>
+                    </div>
+                    <p class="juego-desc">Oyasumii es un juego de aventura en el que los jugadores exploran un mundo mágico lleno de secretos y desafíos.</p>
+                    <ul class="juego-tags">
+                        <li>Liminal</li>
+                        <li>Aventura</li>
+                        <li>Terror</li>
+                    </ul>
+                    <div class="juego-meta">
+                        <span>Desarrollador: NEO PROJECT Studios</span>
+                        <span>Editor: NEO PROJECT Studios</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificaciones">
+        <h2 class="titulo-seccion">Certificaciones y Cursos</h2>
+        <div class="cert-lista">
+            <div class="cert-item">
+                <div class="cert-fecha">17/11/2025</div>
+                <div class="cert-info">
+                    <h3>AWS Academy Graduate - Cloud Foundations</h3>
+                    <p>Amazon Web Services (AWS)</p>
+                </div>
+                <div class="cert-imagen" aria-hidden="true">
+                    <img src="/img/badge1.png" alt="Logo de AWS" width="40" height="40">
+                </div>
+            </div>
+            <div class="cert-item">
+                <div class="cert-fecha">27/11/2025</div>
+                <div class="cert-info">
+                    <h3>Introduction to IoT</h3>
+                    <p>Cisco</p>
+                </div>
+                <div class="cert-imagen" aria-hidden="true">
+                    <img src="/img/badge2.png" alt="Logo de Cisco" width="40" height="40">
+                </div>
+            </div>
+            <div class="cert-item">
+                <div class="cert-fecha">21/10/2025</div>
+                <div class="cert-info">
+                    <h3>Networking Basics</h3>
+                    <p>Cisco</p>
+                </div>
+                <div class="cert-imagen" aria-hidden="true">
+                    <img src="/img/badge3.png" alt="Logo de Cisco" width="40" height="40">
+                </div>
+            </div>
+            <div class="cert-item">
+                <div class="cert-fecha">15/2/2026</div>
+                <div class="cert-info">
+                    <h3>Operating Systems Basics</h3>
+                    <p>Cisco</p>
+                </div>
+                <div class="cert-imagen" aria-hidden="true">
+                    <img src="/img/badge4.png" alt="Logo de Cisco" width="40" height="40">
+                </div>
+            </div>
+            <div class="cert-item">
+                <div class="cert-fecha">23/3/2026</div>
+                <div class="cert-info">
+                    <h3>Operating Systems Support</h3>
+                    <p>Cisco</p>
+                </div>
+                <div class="cert-imagen" aria-hidden="true">
+                    <img src="/img/badge5.png" alt="Logo de Cisco" width="40" height="40">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Hector Lisandro Cruz Camacho. Diseñado y desarrollado desde cero asistido parcialmente y depùrado con Claude AI.</p>
+    </footer>
+</body>
+</html>
